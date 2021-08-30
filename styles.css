@@ -22,11 +22,11 @@
 }
 
 .navbar-link:visited {
-    color: inherit;
+    color: black;
 }
 
 .navbar-link:hover, .navbar-link:active {
-    color: mediumaquamarine;
+    color: aquamarine;
 }
 
 .content {
