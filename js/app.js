@@ -1,30 +1,27 @@
 const app = new PIXI.Application({
-    autoFit: window, backgroundColor: 0xcae3eb, resolution: window.devicePixelRatio || 1,
+    resizeTo: window, backgroundColor: 0xcae3eb, resolution: window.devicePixelRatio || 1,
 });
 
 const graphics = new PIXI.Graphics();
 app.stage.addChild(graphics)
-
-console.log(app.screen.width)
-console.log(app.screen.height)
 graphics.lineStyle({ width: 2, color: 0xF5F5F5, cap: PIXI.LINE_CAP.SQUARE })
 
 const diameter = 2
-// TODO: Something is going wrong with this calculation...
+
 const width = app.screen.width / diameter
 const height = app.screen.height / diameter
 
 
 const toVisit = new Set()
-const itrsPerFrame = 20
+const itrsPerFrame = 30
 
 // TODO randomize initial value
-const initX = Math.floor(Math.random() * width)
-const initY = Math.floor(Math.random() * height)
+const initX = Math.floor(Math.random() * width / 4)
+const initY = Math.floor(Math.random() * height / 4)
 const cells = initializeVisited(width, height)
 console.log(cells)
-cells[0][0].visited = true
-addNeighbors(cells[0][0])
+cells[initY][initX].visited = true
+addNeighbors(cells[initY][initX])
 
 const ticker = PIXI.Ticker.shared
 ticker.stop();
