@@ -3,8 +3,8 @@ import TitlePage from '../components/TitlePage'
 
 const IndexPage = () => {
     let titleProps =  {
-        title: "yan the ham's meme museum",
-        subtitle: "a place for fun.",
+        title: "behold!",
+        subtitle: "it's empty.",
     }
     return (
         <React.Fragment>
