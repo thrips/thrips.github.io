@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "thrippy",
+    siteUrl: "https://thrips.github.io",
+    title: "thrips",
   },
   plugins: ["gatsby-plugin-styled-components"],
 };
