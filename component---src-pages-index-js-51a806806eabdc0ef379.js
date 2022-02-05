@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkthrippy=self.webpackChunkthrippy||[]).push([[678],{6558:function(e,t,n){n.r(t);var u=n(7294),a=n(6476);t.default=function(){var e={title:"yan the ham's meme museum",subtitle:"a place for fun."};return u.createElement(u.Fragment,null,u.createElement(a.Z,e))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-51a806806eabdc0ef379.js.map

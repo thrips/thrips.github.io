@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkthrippy=self.webpackChunkthrippy||[]).push([[285],{8507:function(e,t,n){n.r(t);var r=n(7294),l=n(6476);t.default=function(){var e={title:"behold!",subtitle:"it's empty."};return r.createElement(r.Fragment,null,r.createElement(l.Z,e))}}}]);
+//# sourceMappingURL=component---src-pages-stuff-js-4ba83364a52c1db086b0.js.map
