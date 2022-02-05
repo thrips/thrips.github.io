@@ -1,23 +1,15 @@
 import * as React from 'react'
-import * as PIXI from 'pixi.js'
 import styled from 'styled-components'
 
 const MazeBackground = styled.div`
     position: fixed;
+    background-color: #cae3eb;
 `
 
 export default class Maze extends React.Component {
 
     constructor(props) {
         super(props)
-
-        this.app = new PIXI.Application({
-            resizeTo: window,
-            backgroundColor: 0xcae3eb,
-            resolution: window.devicePixelRatio || 1,
-        });
-
-        this.graphics = new PIXI.Graphics();
         this.diameter = 2 //TODO Make this a function of window size
         this.toVisit = new Set()
         this.itrsPerFrame = 30
@@ -29,6 +21,15 @@ export default class Maze extends React.Component {
     }
 
     componentDidMount() {
+        let PIXI = require('pixi.js')
+
+        this.app = new PIXI.Application({
+            resizeTo: window,
+            backgroundColor: 0xcae3eb,
+            resolution: window.devicePixelRatio || 1,
+        });   
+        this.graphics = new PIXI.Graphics();
+
         document.getElementById('pixi-canvas').appendChild(this.app.view)
         this.app.stage.addChild(this.graphics)
         this.graphics.lineStyle({ width: this.diameter, color: 0xF5F5F5, cap: PIXI.LINE_CAP.SQUARE })
@@ -78,7 +79,7 @@ export default class Maze extends React.Component {
         const idx = Math.floor(Math.random() * s.size)
         let count = 0
         for (let e of s) {
-            if (count++ == idx) {
+            if (count++ === idx) {
                 return e
             }
         }
