@@ -1,7 +1,7 @@
 import * as React from 'react'
 import TitlePage from '../components/TitlePage'
 
-const IndexPage = () => {
+const StuffPage = () => {
     let titleProps =  {
         title: "behold!",
         subtitle: "it's empty.",
@@ -13,4 +13,4 @@ const IndexPage = () => {
     )
 }
 
-export default IndexPage
+export default StuffPage
